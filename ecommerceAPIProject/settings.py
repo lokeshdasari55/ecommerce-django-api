@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-oqkrye$ia@-#hi5j0=&vqwykk=e-d3xm$opn8w1k#5l_8d((+a
 DEBUG = True
 
 # ALLOWED_HOSTS = ["glenna-unreflecting-candance.ngrok-free.dev", "127.0.0.1"]
-# CSRF_TRUSTED_ORIGINS = ["https://glenna-unreflecting-candance.ngrok-free.dev"]
+CSRF_TRUSTED_ORIGINS = ["https://ecommerce-django-api-production.up.railway.app"]
 
 ALLOWED_HOSTS =["*"]
 
