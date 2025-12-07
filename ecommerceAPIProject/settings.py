@@ -83,18 +83,29 @@ WSGI_APPLICATION = 'ecommerceAPIProject.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 
-DB = os.getenv("DB")
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': os.getenv("PG_PASSWORD"),
-        'HOST': os.getenv("PG_HOST"),
-        'PORT': os.getenv("PG_PORT"),
+        'PASSWORD': 'FYYIczRtkwyTCCAZRmvcfLMUHvapPDBS',
+        'HOST': 'caboose.proxy.rlwy.net',
+        'PORT': '20336',
     } 
 }
+
+# DB = os.getenv("DB")
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': os.getenv("PG_PASSWORD"),
+#         'HOST': os.getenv("PG_HOST"),
+#         'PORT': os.getenv("PG_PORT"),
+#     } 
+# }
 
 # if not DB:
 
