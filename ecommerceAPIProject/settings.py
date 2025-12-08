@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -84,15 +85,25 @@ WSGI_APPLICATION = 'ecommerceAPIProject.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'FYYIczRtkwyTCCAZRmvcfLMUHvapPDBS',
-        'HOST': 'caboose.proxy.rlwy.net',
-        'PORT': '20336',
-    } 
+    'default': dj_database_url.config(
+        # This looks for a variable called DATABASE_URL in your .env file
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600
+    )
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'FYYIczRtkwyTCCAZRmvcfLMUHvapPDBS',
+#         'HOST': 'caboose.proxy.rlwy.net',
+#         'PORT': '20336',
+#     } 
+# }
+
+
 
 # DB = os.getenv("DB")
 
